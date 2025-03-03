@@ -14,9 +14,9 @@ The **functional requirements** specify the key **features and functionalities**
 
 ### **1️⃣ GPA Calculator (📊 Track Your Academic Progress)**  
 - Allows students to **input their course scores and credit units** to automatically calculate their **GPA**.  
-- **Supports multiple semesters**, making it easy to **track CGPA** over time.  
-- Provides a **visual progress indicator** to help students see how close they are to their academic goals.  
-- Option to **download GPA reports as a PDF** for record-keeping.  
+- **Supports multiple semesters**, making it easy to **track CGPA** over time.
+- The GPA calculator helps students determine the steps needed to achieve their desired GPA.
+
 
 ### **2️⃣ Student Notes (📝 Never Forget Important Information)**  
 - Students can **jot down important notes** directly in the app.  
@@ -30,7 +30,7 @@ The **functional requirements** specify the key **features and functionalities**
   ✅ **Reading Timetable** – For planning study hours.  
 - **Editable fields** to input the **time and subjects** for each day.  
 - **Save & load functionality** to keep schedules even after refreshing the page.  
-- **Saturday and Sunday removed** to focus on the school week.  
+
 
 ### **4️⃣ Navigation System (🔗 Smooth and Easy-to-Use)**  
 - A **fixed navigation bar** with links to **Home, GPA Calculator, Notes, and Timetable**.  
@@ -87,7 +87,7 @@ AUI Student Companion is **more than just an app**—it's a **digital study assi
 ## **🛠 Technologies Used**
 - **HTML, CSS, and JavaScript** for frontend development.  
 - **LocalStorage** for saving student notes and timetables.  
-- **HTML2PDF.js** for generating PDF reports in the GPA calculator.  
+  
 
 
 
