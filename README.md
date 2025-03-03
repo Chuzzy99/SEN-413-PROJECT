@@ -8,7 +8,7 @@
 
 
 
-## **AUI Student Companion – README File**  
+## **AUI Student Companion**  
 
 ### **📌 Introduction**  
 AUI Student Companion is a **comprehensive web application** designed to help students **organize their academic life** efficiently. This app includes essential tools like a **GPA Calculator, Smart Notes, and a Weekly Timetable Planner**, all in one place.  
