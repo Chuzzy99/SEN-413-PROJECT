@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const saveTimetableBtn = document.getElementById("saveTimetable");
     const loadTimetableBtn = document.getElementById("loadTimetable");
     const timetableTypeSelect = document.getElementById("timetableType");
+    const menuToggle = document.querySelector(".menu-toggle"); // Fix for dropdown toggle
+    const navLinks = document.querySelector(".nav-links"); // Fix for dropdown toggle
 
     // Load timetable data based on selected category
     function loadTimetable() {
@@ -37,6 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(`✅ ${selectedType.replace("Timetable", "")} Timetable saved successfully!`);
     }
 
+    // Toggle mobile menu
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show"); // Add or remove 'show' class for dropdown
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show"); // Ensure menu closes after clicking a link
+        });
+    });
+
     // Button Event Listeners
     saveTimetableBtn.addEventListener("click", saveTimetable);
     loadTimetableBtn.addEventListener("click", loadTimetable);
@@ -44,4 +58,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load default timetable on page load
     loadTimetable();
 });
-

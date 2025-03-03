@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const resetBtn = document.getElementById("reset");
     const courseList = document.getElementById("courseList");
     const result = document.getElementById("result");
+    const menuToggle = document.querySelector(".menu-toggle"); // Fix for dropdown toggle
+    const navLinks = document.querySelector(".nav-links"); // Fix for dropdown toggle
 
     // Function to get Grade Point
     function getGradePoint(score) {
@@ -44,5 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
     resetBtn.addEventListener("click", () => {
         courseList.innerHTML = "";
         result.textContent = "GPA: 0.00";
+    });
+
+    // Toggle mobile menu
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show"); // Add or remove 'show' class for dropdown
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show"); // Ensure menu closes after clicking a link
+        });
     });
 });

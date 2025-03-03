@@ -79,12 +79,16 @@ nav {
     .nav-links {
         display: none;
         flex-direction: column;
+      margin-top: 60px;
         position: absolute;
         top: 60px;
         right: 0;
         background: #007bff;
         width: 100%;
         text-align: center;
+        line-height: 3;
+
+        
     }
 
     .nav-links.show {
