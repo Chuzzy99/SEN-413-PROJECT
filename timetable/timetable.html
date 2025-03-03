@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Timetable</title>
+    <link rel="stylesheet" href="./timetable.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div><a href="../index.html"><img class="logo" src="../img/augustine-university-logo-round.png" alt=""></a></div>
+        <button class="menu-toggle">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="../gpa/gpa.html">📊 GPA Calculator</a></li>
+            <li><a href="../notes/notes.html">📝 Notes</a></li>
+            <li><a href="../timetable/timetable.html" class="active">📅 Timetable</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>📖 Weekly Timetable</h1>
+
+        <label for="timetableType">Select Timetable:</label>
+        <select id="timetableType">
+            <option value="SchoolTimetable">🏫 School Timetable</option>
+            <option value="ReadingTimetable">📚 Reading Timetable</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Courses</th>
+                </tr>
+            </thead>
+            <tbody id="timetableBody">
+                <tr><td>Monday</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                <tr><td>Tuesday</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                <tr><td>Wednesday</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                <tr><td>Thursday</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                <tr><td>Friday</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+            </tbody>
+        </table>
+
+        <div class="buttons">
+            <button id="saveTimetable">💾 Save Timetable</button>
+            <button id="loadTimetable">📖 Show Selected Timetable</button>
+        </div>
+    </div>
+
+    <script src="./timetable.js"></script>
+    <script src="./navbar.js"></script> <!-- Navbar script -->
+</body>
+</html>

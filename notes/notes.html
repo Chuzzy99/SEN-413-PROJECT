@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Notes</title>
+    <link rel="stylesheet" href="./notes.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/index.html">
+                <img src="../img/augustine-university-logo-round.png" alt="AUI Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <button onclick="window.location.href='/gpa/gpa.html'">📊 GPA Calculator</button>
+            <button class="active" onclick="window.location.href='./notes.html'">📝 Notes</button>
+            <button onclick="window.location.href='/timetable/timetable.html'">📅 Timetable</button>
+        </div>
+        <button class="nav-toggle" id="navToggle">☰</button>
+    </nav>
+
+    <div class="container notes-container">
+        <h1>📝 Student Notes</h1>
+
+        <div class="note-input">
+            <input type="text" id="noteCaption" placeholder="Enter note caption...">
+            <textarea id="noteArea" placeholder="Write your note here..."></textarea>
+        </div>
+        
+        <div class="buttons">
+            <button id="saveNote">💾 Save Note</button>
+            <button id="clearNotes">🗑 Clear</button>
+        </div>
+
+        <h2>📂 Saved Notes</h2>
+        <ul id="savedNotesList"></ul>
+    </div>
+
+    <script src="./notes.js"></script>
+</body>
+</html>

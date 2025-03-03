@@ -1,0 +1,236 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background:  white;
+    margin: 0;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    padding: 15px 20px;
+    color: white;
+    position: relative;
+}
+
+/* Logo & Title */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 250px; /* Increased size */
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    background: white;
+    color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 60vh;
+    background: url('background.jpg') center/cover;
+    padding: 20px;
+}
+
+.hero-content {
+    background: transparent;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 600px;
+    line-height: 1.8;
+}
+/* Overview Section */
+.overview {
+    padding: 50px 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.r-logo{
+    width: 500px;
+    height: auto;
+   
+}
+.r-logo-1{
+    justify-items: right;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: white;
+    padding: 30px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.testimonials h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Marquee Container */
+.marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    padding: 5em;
+    margin-left: -50px;
+    margin-bottom: -30px;
+}
+
+/* Marquee Content - Smooth Loop */
+.marquee-content {
+    display: flex;
+    gap: 50px;
+    min-width: 100%;
+    animation: marqueeLoop 20s linear infinite;
+}
+
+/* Pause scrolling when hovered */
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Individual Testimonial */
+.marquee-content p {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Keyframes for Smooth Loop */
+@keyframes marqueeLoop {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Make logo smaller on mobile */
+    .logo {
+        width: 80px;
+    }
+
+    /* Hide nav links and show menu button */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #007bff;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Show nav links when menu is active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Center hero text */
+    .hero {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        max-width: 90%;
+    }
+}
+
